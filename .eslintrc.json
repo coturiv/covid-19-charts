@@ -1,0 +1,38 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "react-native/react-native": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "react-native", "prettier"],
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "comma-dangle": ["error", "always-multiline"],
+    "linebreak-style": 0,
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-underscore-dangle": 0,
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^React$" }],
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": 0,
+    "react/jsx-props-no-spreading": ["error", { "custom": "ignore" }],
+    "react/prop-types": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-native/no-raw-text": 0
+  }
+}
